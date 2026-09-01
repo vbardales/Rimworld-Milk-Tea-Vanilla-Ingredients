@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- ============================================================
+       Version *mod de patchs* du mod, abandonnee au profit de la
+       version autonome. Voir attic/README.md.
+
+       Les ingredients.
+
+       L'original demande Axolotl_Egg (xxk.makeaxolotlegggreatagain) et
+       DragonianMilk (rooandgloomy.dragonianracemod). On les remplace par
+       la categorie vanilla EggsUnfertilized - donc l'oeuf de n'importe
+       quel oiseau, y compris ceux ajoutes par d'autres mods - et par le
+       Milk vanilla.
+
+       Les quantites : un oeuf vaut 0,25 de nutrition, un lait 0,05.
+       1 oeuf + 4 lait = 0,45 en entree pour 0,4 en sortie, ce qui garde
+       la recette a peu pres neutre, comme elle l'etait.
+       ============================================================ -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="MakeAxolotlEggMilkTea"]/ingredients</xpath>
+    <value>
+      <ingredients>
+        <li>
+          <filter>
+            <categories>
+              <li>EggsUnfertilized</li>
+            </categories>
+          </filter>
+          <count>1</count>
+        </li>
+        <li>
+          <filter>
+            <thingDefs>
+              <li>Milk</li>
+            </thingDefs>
+          </filter>
+          <count>4</count>
+        </li>
+      </ingredients>
+    </value>
+  </Operation>
+
+  <!-- Le filtre par defaut de la bill. Sans lui, l'onglet des travaux
+       propose encore les deux ingredients d'origine quand leurs mods
+       sont charges, et la bill peut se retrouver insatisfaisable. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/RecipeDef[defName="MakeAxolotlEggMilkTea"]</xpath>
+    <value>
+      <fixedIngredientFilter>
+        <categories>
+          <li>EggsUnfertilized</li>
+        </categories>
+        <thingDefs>
+          <li>Milk</li>
+        </thingDefs>
+      </fixedIngredientFilter>
+    </value>
+  </Operation>
+
+  <!-- ============================================================
+       Les textes.
+
+       Ils nomment l'axolotl et la fille-dragon, ce qui n'a plus de sens
+       une fois les ingredients changes. Reecrits en anglais, qui est le
+       repli du jeu ; le francais est injecte dans Languages/.
+       ============================================================ -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="MakeAxolotlEggMilkTea"]/label</xpath>
+    <value><label>make egg milk tea</label></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="MakeAxolotlEggMilkTea"]/description</xpath>
+    <value><description>Whisk an egg into hot milk tea until it turns silky.</description></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="MakeAxolotlEggMilkTea"]/jobString</xpath>
+    <value><jobString>Making egg milk tea.</jobString></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AxolotlEggMilkTea"]/label</xpath>
+    <value><label>egg milk tea</label></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AxolotlEggMilkTea"]/description</xpath>
+    <value><description>Milk tea with an egg beaten through it, served hot. Rich, faintly sweet, and thick enough to hold a spoon upright for a second before it sinks.</description></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="AxolotlEggMilkTeaBuff"]/label</xpath>
+    <value><label>milk tea comfort</label></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="AxolotlEggMilkTeaBuff"]/description</xpath>
+    <value><description>Warm, sweet and heavy in the stomach. It is hard to stay sluggish with that inside you.</description></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThoughtDef[defName="AteAxolotlEggMilkTea"]/stages/li[1]/label</xpath>
+    <value><label>drank egg milk tea</label></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThoughtDef[defName="AteAxolotlEggMilkTea"]/stages/li[1]/description</xpath>
+    <value><description>That was properly made. Hot, sweet, and thick enough to feel like a meal.</description></value>
+  </Operation>
+
+</Patch>
