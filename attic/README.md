@@ -1,19 +1,19 @@
-# Grenier
+# Attic
 
 ## `MilkTea-patch-version.xml`
 
-Version **mod de patchs** du mod, abandonnée au profit de la version autonome.
+The **patch mod** version, abandoned in favour of the standalone one.
 
-Elle réécrivait par xpath les ingrédients de la recette de MengYeYu, sans rien copier de son
-mod : techniquement la solution la plus propre. Ce qui l'a fait abandonner, c'est le bloc
-**« Éléments requis »** de sa page Workshop, qui abonne d'office aux deux mods de race. Un
-patch évite d'avoir à *charger* les deux races en jeu, pas de les *télécharger*. Voir le
+It rewrote the ingredients of MengYeYu's recipe by xpath, copying nothing from their mod —
+technically the cleaner answer. What killed it was the **Required Items** block on their
+Workshop page, which subscribes you to the two race mods automatically. A patch spares you
+having to *load* the two races in a save, not having to *download* them. See the
 [README](../README.md).
 
-Conservée au cas où l'approche redeviendrait pertinente — par exemple si MengYeYu retirait ses
-éléments requis, auquel cas le patch redevient préférable à la reprise.
+Kept in case the approach becomes the right one again — if MengYeYu ever drops the required
+items, patching beats rebuilding.
 
-Ses onze opérations avaient été vérifiées une par une contre les defs du mod source : chacune
-touchait exactement une cible.
+Its eleven operations were each resolved against the source mod's defs before it was retired:
+every one of them hit exactly one target.
 
-**Ce dossier n'est pas publié** — seul `Mod/` l'est.
+**This folder is not published** — only `Mod/` is.
