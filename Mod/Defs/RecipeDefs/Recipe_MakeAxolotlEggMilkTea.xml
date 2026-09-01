@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef>
+    <defName>MakeAxolotlEggMilkTea</defName>
+    <label>make egg milk tea</label>
+    <description>Whisk an egg into hot milk tea until it turns silky.</description>
+    <jobString>Making egg milk tea.</jobString>
+    <!-- å·¥ä½œå±žæ€§ -->
+    <workAmount>300</workAmount>
+    <!-- å¢žåŠ å·¥æ—¶ -->
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <!-- ä½¿ç”¨çƒ¹é¥ªé€Ÿåº¦å±žæ€§ -->
+    <effectWorking>Cook</effectWorking>
+    <!-- çƒ¹é¥ªæ•ˆæžœ -->
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <!-- çƒ¹é¥ªéŸ³æ•ˆ -->
+    <!-- æŠ€èƒ½è¦æ±‚ -->
+    <workSkill>Cooking</workSkill>
+    <skillRequirements>
+      <Cooking>6</Cooking>
+      <!-- æé«˜æŠ€èƒ½è¦æ±‚ -->
+    </skillRequirements>
+    <!-- äº§ç‰© -->
+    <products>
+      <AxolotlEggMilkTea>1</AxolotlEggMilkTea>
+    </products>
+    <!-- ææ–™ -->
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>EggsUnfertilized</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <!-- å¯ç”¨å·¥ä½œå° -->
+    <recipeUsers>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+      <!-- æ”¯æŒç‡ƒæ–™ç‚‰ -->
+    </recipeUsers>
+    <!-- æ˜¾ç¤ºä¼˜å…ˆçº§ -->
+    <displayPriority>500</displayPriority>
+    <fixedIngredientFilter>
+      <categories>
+        <li>EggsUnfertilized</li>
+      </categories>
+      <thingDefs>
+        <li>Milk</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+</Defs>

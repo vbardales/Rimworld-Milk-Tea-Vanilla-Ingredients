@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- å®šä¹‰å¥¶èŒ¶ä¸ºç‰¹æ®Šé¤é£Ÿ -->
+  <ThingDef ParentName="MealCooked">
+    <defName>AxolotlEggMilkTea</defName>
+    <label>egg milk tea</label>
+    <description>Milk tea with an egg beaten through it, served hot. Rich, faintly sweet, and thick enough to hold a spoon upright for a second before it sinks.</description>
+    <!-- è´´å›¾è®¾ç½® -->
+    <graphicData>
+      <texPath>Things/Item/Meal/AxolotlEggMilkTea</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <!-- é£Ÿç‰©å±žæ€§ -->
+    <statBases>
+      <WorkToMake>300</WorkToMake>
+      <!-- å¢žåŠ å·¥æ—¶ -->
+      <MarketValue>30</MarketValue>
+      <!-- æé«˜ä»·å€¼ -->
+      <Nutrition>0.4</Nutrition>
+      <!-- å¢žåŠ è¥å…» -->
+    </statBases>
+    <ingestible>
+      <preferability>MealFine</preferability>
+      <!-- è®¾ç½®ä¸ºç²¾è‡´é¤é£Ÿçº§åˆ« -->
+      <joy>0.3</joy>
+      <!-- å¢žåŠ å¨±ä¹å€¼ -->
+      <joyKind>Gluttonous</joyKind>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <!-- é¥®ç”¨æ•ˆæžœ -->
+      <ingestSound>Meal_Eat</ingestSound>
+      <!-- é¥®ç”¨éŸ³æ•ˆ -->
+      <tasteThought>AteAxolotlEggMilkTea</tasteThought>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AxolotlEggMilkTeaBuff</hediffDef>
+          <severity>0.5</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <!-- å †å é™åˆ¶ -->
+    <stackLimit>5</stackLimit>
+  </ThingDef>
+</Defs>

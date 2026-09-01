@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ======= å¥¶èŒ¶çš„å¿ƒæƒ…åŠ æˆ ========= -->
+  <ThoughtDef>
+    <defName>AteAxolotlEggMilkTea</defName>
+    <durationDays>0.5</durationDays>
+    <stages>
+      <li>
+        <label>drank egg milk tea</label>
+        <description>That was properly made. Hot, sweet, and thick enough to feel like a meal.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

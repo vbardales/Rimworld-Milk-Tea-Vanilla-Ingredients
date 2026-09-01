@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>nelim.milkteavanillaingredients</packageId>
+  <name>Egg Milk Tea - Vanilla Ingredients</name>
+  <author>nelim</author>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Egg milk tea, brewed from one egg and four milk. A fine meal you can cook at any stove, with nothing else to install.
+
+WHY THIS EXISTS
+
+This is a standalone rebuild of MengYeYu's mod, which you should look at first:
+
+https://steamcommunity.com/sharedfiles/filedetails/?id=3542599309
+
+Theirs is the original. The drink, its artwork and its design are their work, and the tea here is still shown with the texture they drew.
+
+The reason for a separate version is narrow. Their recipe calls for an axolotl dewdrop egg and dragonian milk, and their Workshop page lists both source mods as required items - so subscribing pulls in two race mods whether you want them or not. If you do want them, use theirs and not this one; it is the fuller mod and it will keep being updated.
+
+This version exists for colonies that want the drink without the two races. It asks for ordinary ingredients instead:
+
+- one unfertilized egg, from any bird, including birds added by other mods
+- four milk
+
+An egg is 0.25 nutrition and a milk is 0.05, so one egg and four milk is 0.45 going in for 0.4 coming out - the recipe stays roughly neutral, as it was. Everything else is kept as MengYeYu made it: fine meal, 0.4 nutrition, joy, +8 mood for half a day, and a buff to consciousness and moving. The labels are rewritten in English, since they named the two creatures, and a French translation is included.
+
+Original defNames are kept, so a save moves between the two mods without losing anything. They are declared incompatible, since both define the same drink - run one or the other.
+
+TO MENGYEYU
+
+Thank you for making this. If you would rather this version did not exist, say so and it comes down - no argument, no delay.</description>
+  <incompatibleWith>
+    <li>myy.axolotleggmilktea</li>
+  </incompatibleWith>
+</ModMetaData>
